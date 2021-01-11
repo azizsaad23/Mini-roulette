@@ -1,27 +1,42 @@
-#rl {
-	widows: 400px;
-	height: 400px;
-	margin: 0 auto;
-	position: relative;
+body{
+	margin:0; 
+	background-image :url("men.jpg");
+	background-repeat:no-repeat;
+	background-size: cover; 
 }
-.marker {
-	position: absolute;
-	width:60px;
-	left: 172px;
-	top:-20px;
-	z-index: 2;
+.roulette {
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+	justify-content:center; 
+	height:100vh 
 }
- 
-.button {
-	display:block;
+.wheel #wl{
+	width: 500px;
+	height: 500px;
+	transition:transform 10s cubic-bezier(0.19,1,0.22,1);
+	will-change:transform;
+	border-radius:50%;
+	box-shadow:0 0 15px black;
+	transform:rotate(0);	
+}
+
+#btn {
+	
 	width: 250px;
 	margin:40px auto;
-	cursor:pointer;   
+	   
 } 
-.button:hover {
+#btn:hover {
 	opacity: 0.8
 }
 
 .blur {
 	animation:blur 10s
+}
+.arrow {
+	margin-bottom: -15px;
+	z-index: 99;
+	filter: drop-shadow(0 0 8px black)
+	color:white;
 }
